@@ -5,52 +5,7 @@
   "tag": "profile|x86"
 },
 {
-  "message": "rebuilding JSON /Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/android/.cxx/Debug/j56j3k3o/x86/android_gradle_build.json due to:",
-  "file": "/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src/CMakeLists.txt",
-  "tag": "profile|x86"
-},
-{
-  "message": "- no fingerprint file, will remove stale configuration folder",
-  "file": "/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src/CMakeLists.txt",
-  "tag": "profile|x86"
-},
-{
-  "message": "removing stale contents from \u0027/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/android/.cxx/Debug/j56j3k3o/x86\u0027",
-  "file": "/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src/CMakeLists.txt",
-  "tag": "profile|x86"
-},
-{
-  "message": "created folder \u0027/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/android/.cxx/Debug/j56j3k3o/x86\u0027",
-  "file": "/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src/CMakeLists.txt",
-  "tag": "profile|x86"
-},
-{
-  "message": "executing cmake /Users/silmac-021/Library/Android/sdk/cmake/3.22.1/bin/cmake \\\n  -H/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d21 \\\n  -DANDROID_PLATFORM\u003dandroid-21 \\\n  -DANDROID_ABI\u003dx86 \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003dx86 \\\n  -DANDROID_NDK\u003d/Users/silmac-021/Library/Android/sdk/ndk/28.2.13676358 \\\n  -DCMAKE_ANDROID_NDK\u003d/Users/silmac-021/Library/Android/sdk/ndk/28.2.13676358 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/Users/silmac-021/Library/Android/sdk/ndk/28.2.13676358/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/Users/silmac-021/Library/Android/sdk/cmake/3.22.1/bin/ninja \\\n  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/jni/intermediates/cxx/Debug/j56j3k3o/obj/x86 \\\n  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/jni/intermediates/cxx/Debug/j56j3k3o/obj/x86 \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  -B/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/android/.cxx/Debug/j56j3k3o/x86 \\\n  -GNinja\n",
-  "file": "/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src/CMakeLists.txt",
-  "tag": "profile|x86"
-},
-{
-  "message": "/Users/silmac-021/Library/Android/sdk/cmake/3.22.1/bin/cmake \\\n  -H/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d21 \\\n  -DANDROID_PLATFORM\u003dandroid-21 \\\n  -DANDROID_ABI\u003dx86 \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003dx86 \\\n  -DANDROID_NDK\u003d/Users/silmac-021/Library/Android/sdk/ndk/28.2.13676358 \\\n  -DCMAKE_ANDROID_NDK\u003d/Users/silmac-021/Library/Android/sdk/ndk/28.2.13676358 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/Users/silmac-021/Library/Android/sdk/ndk/28.2.13676358/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/Users/silmac-021/Library/Android/sdk/cmake/3.22.1/bin/ninja \\\n  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/jni/intermediates/cxx/Debug/j56j3k3o/obj/x86 \\\n  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/jni/intermediates/cxx/Debug/j56j3k3o/obj/x86 \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  -B/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/android/.cxx/Debug/j56j3k3o/x86 \\\n  -GNinja\n",
-  "file": "/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src/CMakeLists.txt",
-  "tag": "profile|x86"
-},
-{
-  "message": "Received process result: 0",
-  "file": "/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src/CMakeLists.txt",
-  "tag": "profile|x86"
-},
-{
-  "message": "Exiting generation of /Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/android/.cxx/Debug/j56j3k3o/x86/compile_commands.json.bin normally",
-  "file": "/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src/CMakeLists.txt",
-  "tag": "profile|x86"
-},
-{
-  "message": "done executing cmake",
-  "file": "/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src/CMakeLists.txt",
-  "tag": "profile|x86"
-},
-{
-  "message": "hard linked /Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/android/.cxx/Debug/j56j3k3o/x86/compile_commands.json to /Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/android/.cxx/tools/profile/x86/compile_commands.json",
+  "message": "JSON \u0027/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/android/.cxx/Debug/j56j3k3o/x86/android_gradle_build.json\u0027 was up-to-date",
   "file": "/Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/src/CMakeLists.txt",
   "tag": "profile|x86"
 },
