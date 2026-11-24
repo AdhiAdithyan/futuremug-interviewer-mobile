@@ -1,0 +1,4 @@
+/Users/silmac-021/Library/Android/sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /Users/silmac-021/.pub-cache/hosted/pub.dev/jni-1.2.1/android/.cxx/Debug/j56j3k3o/armeabi-v7a \
+  jni

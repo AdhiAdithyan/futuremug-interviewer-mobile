@@ -1,0 +1,365 @@
+-- Merging decision tree log ---
+application
+INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/main/AndroidManifest.xml:2:5-33:19
+INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml
+MERGED from [:url_launcher_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/url_launcher_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:7:5-12:19
+MERGED from [:url_launcher_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/url_launcher_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.window:window:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d2c1aa823f91e0e8eaed3ca64acf6234/transformed/window-1.2.0/AndroidManifest.xml:22:5-29:19
+MERGED from [androidx.window:window:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d2c1aa823f91e0e8eaed3ca64acf6234/transformed/window-1.2.0/AndroidManifest.xml:22:5-29:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f1efd10b34a82372bab7ce1461d8cf3f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f1efd10b34a82372bab7ce1461d8cf3f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/870a6dbf673bf51dca06c69a4f7402bd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/870a6dbf673bf51dca06c69a4f7402bd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:28:18-86
+	android:name
+		INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/main/AndroidManifest.xml
+manifest
+ADDED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/main/AndroidManifest.xml:1:1-45:12
+MERGED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/main/AndroidManifest.xml:1:1-45:12
+INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+MERGED from [:connectivity_plus] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/connectivity_plus/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_secure_storage] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/flutter_secure_storage/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-10:12
+MERGED from [:jni_flutter] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/jni_flutter/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [:shared_preferences_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/shared_preferences_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [:jni] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/jni/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [:sqlite3_flutter_libs] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/sqlite3_flutter_libs/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [:url_launcher_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/url_launcher_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.preference:preference:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/33ba165fa416da7af07617fabe434e47/transformed/preference-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.9.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/47957f257fccd8a46725a38123aeb418/transformed/browser-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c1635a69d28b245bede804e46f485209/transformed/recyclerview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c5d2a80bc8d29a882aea299617adbb15/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a662faf025b9ce83928380313df483a4/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d2c1aa823f91e0e8eaed3ca64acf6234/transformed/window-1.2.0/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.window:window-java:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a06d74f2ad2ff15ec7584ba500054eba/transformed/window-java-1.2.0/AndroidManifest.xml:17:1-21:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d71aaeb46f3d5dbe5feb7d9c9ba16325/transformed/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.7.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/6e6b6f08476de4ee6e2c097e67be26f2/transformed/fragment-ktx-1.7.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.7.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/9013c385c45b17e75f2074fa1947820d/transformed/fragment-1.7.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.9.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/15f59eeef7fc0910c81d8b706ddb062f/transformed/activity-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.9.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/ee8b3269729be8157dafdb400e82d991/transformed/activity-1.9.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/1dcd3e86d71f3d7b28b6e1015c25a442/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/11cea145f57563dc55924a36cb7189b3/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/8b642222d4b67a41180f03b9de5d71ec/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/434c4447c881734f78b51e556a98a817/transformed/appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d241c30c551480d5ee147a2e5a80dd6c/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/9b9bb8ecab4a860c04deee46c86347fd/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/65db5d86258181ba677f43da0c575716/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.4.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a721b953eb374491a04bf52cd73f14b4/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/fad98e6a73e585eb4bb155159c6ac15e/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c932df2fb70bf02b35abf1b0579ba975/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/291695e804c266b4c549a88c7c6cc64c/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/5ffa116a3d7049e7d966dee131c132d5/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/ef184d0ccfd487ddb7c786646e1de92d/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f2943716fafa21456c0e7964ff1d6867/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/b48c33d179f75241bdb8b7c6ccccf62a/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/0a11297923c4472dcf40d72bc0fc1e3a/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a24dedf2439279599af536eb4f9500c0/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/2cbe9c294e8b5b3fd281c564a9dc3200/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/2d406e54dda8f3d1d66c35a73a9ab69c/transformed/core-ktx-1.17.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/dfb045b01e71d2308bf560444d78af09/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/de0d5d34976dfd277e900bf2d5d59581/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/5c3cc9f2c54ab951de28bc9d1ed33def/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c55d40fb7cee88cdab9a0a056ea84f6f/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.datastore:datastore-preferences-core-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/898056b816ecac006afac68d444b594b/transformed/datastore-preferences-core/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-core-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/cfeecb763435af41e345bbeb487f1e39/transformed/datastore-core/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-preferences-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/8100c71bd130a506f71f7e0f1218f3d2/transformed/datastore-preferences/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/22d4964e098adbe86dfecee08eb936ae/transformed/datastore/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/271f8887aa02fccf2de4101f38a961b7/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/28630b091af866b5cf915d616aa6891d/transformed/core-viewtree-1.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/silmac-021/.gradle/caches/9.5.0/transforms/61ba532c018a8eb454fad1371f58a191/transformed/security-crypto-1.1.0-alpha06/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f1efd10b34a82372bab7ce1461d8cf3f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/61915a3c193fe1fa6d2acb3d444fd530/transformed/tracing-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.4.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/ad55674245ff723b1ba69c90ce7ecbef/transformed/exifinterface-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/7512696a55f6d22998a8f98a4dd7e299/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/870a6dbf673bf51dca06c69a4f7402bd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/dd9fc3f19b1f91a174fc7361be8fd827/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f47e851461f1f0b30571a70ad3937398/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/6d3be1a0a3c20562aeb0b0144cb347a2/transformed/core-1.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/945ae74e286d8598ca30a50405614141/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/919fbd8931aab8bb01c9e78006e38a65/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/bc3d0c33b12a65ad404351fb1a7859c6/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [eu.simonbinder:sqlite3-native-library:3.52.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/1c5b494303a33863ac3fd0635a4a7433/transformed/sqlite3-native-library-3.52.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/silmac-021/.gradle/caches/9.5.0/transforms/3d6f6d4b7934a4cd761bfdcf7d244944/transformed/relinker-1.4.5/AndroidManifest.xml:2:1-7:12
+	package
+		INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/main/AndroidManifest.xml:1:11-69
+queries
+ADDED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/main/AndroidManifest.xml:39:5-44:15
+intent#action:name:android.intent.action.PROCESS_TEXT+data:mimeType:text/plain
+ADDED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/main/AndroidManifest.xml:40:9-43:18
+action#android.intent.action.PROCESS_TEXT
+ADDED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/main/AndroidManifest.xml:41:13-72
+	android:name
+		ADDED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/main/AndroidManifest.xml:41:21-70
+data
+ADDED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/main/AndroidManifest.xml:42:13-50
+	android:mimeType
+		ADDED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/main/AndroidManifest.xml:42:19-48
+uses-permission#android.permission.INTERNET
+ADDED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml:6:22-64
+uses-sdk
+INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml
+MERGED from [:connectivity_plus] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/connectivity_plus/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:connectivity_plus] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/connectivity_plus/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_secure_storage] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/flutter_secure_storage/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:6:5-8:53
+MERGED from [:flutter_secure_storage] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/flutter_secure_storage/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:6:5-8:53
+MERGED from [:jni_flutter] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/jni_flutter/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:jni_flutter] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/jni_flutter/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/shared_preferences_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/shared_preferences_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:jni] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/jni/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:jni] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/jni/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:sqlite3_flutter_libs] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/sqlite3_flutter_libs/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:sqlite3_flutter_libs] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/sqlite3_flutter_libs/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/url_launcher_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/url_launcher_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:5:5-44
+MERGED from [androidx.preference:preference:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/33ba165fa416da7af07617fabe434e47/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/33ba165fa416da7af07617fabe434e47/transformed/preference-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.9.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/47957f257fccd8a46725a38123aeb418/transformed/browser-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.browser:browser:1.9.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/47957f257fccd8a46725a38123aeb418/transformed/browser-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c1635a69d28b245bede804e46f485209/transformed/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c1635a69d28b245bede804e46f485209/transformed/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c5d2a80bc8d29a882aea299617adbb15/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c5d2a80bc8d29a882aea299617adbb15/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a662faf025b9ce83928380313df483a4/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a662faf025b9ce83928380313df483a4/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d2c1aa823f91e0e8eaed3ca64acf6234/transformed/window-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.window:window:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d2c1aa823f91e0e8eaed3ca64acf6234/transformed/window-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.window:window-java:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a06d74f2ad2ff15ec7584ba500054eba/transformed/window-java-1.2.0/AndroidManifest.xml:19:5-44
+MERGED from [androidx.window:window-java:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a06d74f2ad2ff15ec7584ba500054eba/transformed/window-java-1.2.0/AndroidManifest.xml:19:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d71aaeb46f3d5dbe5feb7d9c9ba16325/transformed/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d71aaeb46f3d5dbe5feb7d9c9ba16325/transformed/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.7.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/6e6b6f08476de4ee6e2c097e67be26f2/transformed/fragment-ktx-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.7.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/6e6b6f08476de4ee6e2c097e67be26f2/transformed/fragment-ktx-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.7.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/9013c385c45b17e75f2074fa1947820d/transformed/fragment-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.7.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/9013c385c45b17e75f2074fa1947820d/transformed/fragment-1.7.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/15f59eeef7fc0910c81d8b706ddb062f/transformed/activity-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/15f59eeef7fc0910c81d8b706ddb062f/transformed/activity-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.9.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/ee8b3269729be8157dafdb400e82d991/transformed/activity-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/ee8b3269729be8157dafdb400e82d991/transformed/activity-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/1dcd3e86d71f3d7b28b6e1015c25a442/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/1dcd3e86d71f3d7b28b6e1015c25a442/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/11cea145f57563dc55924a36cb7189b3/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/11cea145f57563dc55924a36cb7189b3/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/8b642222d4b67a41180f03b9de5d71ec/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/8b642222d4b67a41180f03b9de5d71ec/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/434c4447c881734f78b51e556a98a817/transformed/appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/434c4447c881734f78b51e556a98a817/transformed/appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d241c30c551480d5ee147a2e5a80dd6c/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d241c30c551480d5ee147a2e5a80dd6c/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/9b9bb8ecab4a860c04deee46c86347fd/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/9b9bb8ecab4a860c04deee46c86347fd/transformed/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/65db5d86258181ba677f43da0c575716/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/65db5d86258181ba677f43da0c575716/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a721b953eb374491a04bf52cd73f14b4/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a721b953eb374491a04bf52cd73f14b4/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/fad98e6a73e585eb4bb155159c6ac15e/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/fad98e6a73e585eb4bb155159c6ac15e/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c932df2fb70bf02b35abf1b0579ba975/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c932df2fb70bf02b35abf1b0579ba975/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/291695e804c266b4c549a88c7c6cc64c/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/291695e804c266b4c549a88c7c6cc64c/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/5ffa116a3d7049e7d966dee131c132d5/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/5ffa116a3d7049e7d966dee131c132d5/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/ef184d0ccfd487ddb7c786646e1de92d/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/ef184d0ccfd487ddb7c786646e1de92d/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f2943716fafa21456c0e7964ff1d6867/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f2943716fafa21456c0e7964ff1d6867/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/b48c33d179f75241bdb8b7c6ccccf62a/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/b48c33d179f75241bdb8b7c6ccccf62a/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/0a11297923c4472dcf40d72bc0fc1e3a/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/0a11297923c4472dcf40d72bc0fc1e3a/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a24dedf2439279599af536eb4f9500c0/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/a24dedf2439279599af536eb4f9500c0/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/2cbe9c294e8b5b3fd281c564a9dc3200/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/2cbe9c294e8b5b3fd281c564a9dc3200/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/2d406e54dda8f3d1d66c35a73a9ab69c/transformed/core-ktx-1.17.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/2d406e54dda8f3d1d66c35a73a9ab69c/transformed/core-ktx-1.17.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/dfb045b01e71d2308bf560444d78af09/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/dfb045b01e71d2308bf560444d78af09/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/de0d5d34976dfd277e900bf2d5d59581/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/de0d5d34976dfd277e900bf2d5d59581/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/5c3cc9f2c54ab951de28bc9d1ed33def/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/5c3cc9f2c54ab951de28bc9d1ed33def/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c55d40fb7cee88cdab9a0a056ea84f6f/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/c55d40fb7cee88cdab9a0a056ea84f6f/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-core-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/898056b816ecac006afac68d444b594b/transformed/datastore-preferences-core/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-preferences-core-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/898056b816ecac006afac68d444b594b/transformed/datastore-preferences-core/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/cfeecb763435af41e345bbeb487f1e39/transformed/datastore-core/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/cfeecb763435af41e345bbeb487f1e39/transformed/datastore-core/AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/8100c71bd130a506f71f7e0f1218f3d2/transformed/datastore-preferences/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/8100c71bd130a506f71f7e0f1218f3d2/transformed/datastore-preferences/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/22d4964e098adbe86dfecee08eb936ae/transformed/datastore/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.2.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/22d4964e098adbe86dfecee08eb936ae/transformed/datastore/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/271f8887aa02fccf2de4101f38a961b7/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/271f8887aa02fccf2de4101f38a961b7/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/28630b091af866b5cf915d616aa6891d/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/28630b091af866b5cf915d616aa6891d/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/silmac-021/.gradle/caches/9.5.0/transforms/61ba532c018a8eb454fad1371f58a191/transformed/security-crypto-1.1.0-alpha06/AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] /Users/silmac-021/.gradle/caches/9.5.0/transforms/61ba532c018a8eb454fad1371f58a191/transformed/security-crypto-1.1.0-alpha06/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f1efd10b34a82372bab7ce1461d8cf3f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f1efd10b34a82372bab7ce1461d8cf3f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/61915a3c193fe1fa6d2acb3d444fd530/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/61915a3c193fe1fa6d2acb3d444fd530/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.4.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/ad55674245ff723b1ba69c90ce7ecbef/transformed/exifinterface-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.4.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/ad55674245ff723b1ba69c90ce7ecbef/transformed/exifinterface-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/7512696a55f6d22998a8f98a4dd7e299/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/7512696a55f6d22998a8f98a4dd7e299/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/870a6dbf673bf51dca06c69a4f7402bd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/870a6dbf673bf51dca06c69a4f7402bd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/dd9fc3f19b1f91a174fc7361be8fd827/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/dd9fc3f19b1f91a174fc7361be8fd827/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f47e851461f1f0b30571a70ad3937398/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f47e851461f1f0b30571a70ad3937398/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/6d3be1a0a3c20562aeb0b0144cb347a2/transformed/core-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.window.extensions.core:core:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/6d3be1a0a3c20562aeb0b0144cb347a2/transformed/core-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/945ae74e286d8598ca30a50405614141/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/945ae74e286d8598ca30a50405614141/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/919fbd8931aab8bb01c9e78006e38a65/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/919fbd8931aab8bb01c9e78006e38a65/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/bc3d0c33b12a65ad404351fb1a7859c6/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/bc3d0c33b12a65ad404351fb1a7859c6/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [eu.simonbinder:sqlite3-native-library:3.52.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/1c5b494303a33863ac3fd0635a4a7433/transformed/sqlite3-native-library-3.52.0/AndroidManifest.xml:5:5-44
+MERGED from [eu.simonbinder:sqlite3-native-library:3.52.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/1c5b494303a33863ac3fd0635a4a7433/transformed/sqlite3-native-library-3.52.0/AndroidManifest.xml:5:5-44
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/silmac-021/.gradle/caches/9.5.0/transforms/3d6f6d4b7934a4cd761bfdcf7d244944/transformed/relinker-1.4.5/AndroidManifest.xml:5:5-43
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.5] /Users/silmac-021/.gradle/caches/9.5.0/transforms/3d6f6d4b7934a4cd761bfdcf7d244944/transformed/relinker-1.4.5/AndroidManifest.xml:5:5-43
+	tools:overrideLibrary
+		ADDED from [:flutter_secure_storage] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/flutter_secure_storage/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:8:9-50
+	android:targetSdkVersion
+		INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/silmac-021/FlutterApplication/FuturemugInterviewer/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:connectivity_plus] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/connectivity_plus/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from [:connectivity_plus] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/connectivity_plus/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:7:22-76
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/url_launcher_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:8:9-11:74
+	android:exported
+		ADDED from [:url_launcher_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/url_launcher_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:10:13-37
+	android:theme
+		ADDED from [:url_launcher_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/url_launcher_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:11:13-71
+	android:name
+		ADDED from [:url_launcher_android] /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/url_launcher_android/intermediates/merged_manifest/debug/processDebugManifest/AndroidManifest.xml:9:13-74
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d2c1aa823f91e0e8eaed3ca64acf6234/transformed/window-1.2.0/AndroidManifest.xml:23:9-25:40
+	android:required
+		ADDED from [androidx.window:window:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d2c1aa823f91e0e8eaed3ca64acf6234/transformed/window-1.2.0/AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [androidx.window:window:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d2c1aa823f91e0e8eaed3ca64acf6234/transformed/window-1.2.0/AndroidManifest.xml:24:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d2c1aa823f91e0e8eaed3ca64acf6234/transformed/window-1.2.0/AndroidManifest.xml:26:9-28:40
+	android:required
+		ADDED from [androidx.window:window:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d2c1aa823f91e0e8eaed3ca64acf6234/transformed/window-1.2.0/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.window:window:1.2.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/d2c1aa823f91e0e8eaed3ca64acf6234/transformed/window-1.2.0/AndroidManifest.xml:27:13-51
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f1efd10b34a82372bab7ce1461d8cf3f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f1efd10b34a82372bab7ce1461d8cf3f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/110ca5d7787d28291a34284e6611ff20/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:23:9-81
+permission#com.futuremug.futuremug_interviewer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:26:22-94
+uses-permission#com.futuremug.futuremug_interviewer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.17.0] /Users/silmac-021/.gradle/caches/9.5.0/transforms/576c632732f96d7c2d2c135b4d403fe4/transformed/core-1.17.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/silmac-021/.gradle/caches/9.5.0/transforms/f93dc5aa6f932f6e861c98708d19b48b/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92

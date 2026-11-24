@@ -1,0 +1,9 @@
+eu.simonbinder.sqlite3_flutter_libs-debug-0 /Users/silmac-021/.pub-cache/hosted/pub.dev/sqlite3_flutter_libs-0.5.42/android/src/debug/res
+eu.simonbinder.sqlite3_flutter_libs-main-1 /Users/silmac-021/.pub-cache/hosted/pub.dev/sqlite3_flutter_libs-0.5.42/android/src/main/res
+eu.simonbinder.sqlite3_flutter_libs-pngs-2 /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/sqlite3_flutter_libs/generated/res/pngs/debug
+eu.simonbinder.sqlite3_flutter_libs-updated_navigation_xml-3 /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/sqlite3_flutter_libs/generated/updated_navigation_xml/debug
+eu.simonbinder.sqlite3_flutter_libs-mergeDebugResources-4 /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/sqlite3_flutter_libs/intermediates/incremental/debug/mergeDebugResources/merged.dir
+eu.simonbinder.sqlite3_flutter_libs-mergeDebugResources-5 /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/sqlite3_flutter_libs/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+eu.simonbinder.sqlite3_flutter_libs-debug-6 /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/sqlite3_flutter_libs/intermediates/merged_res/debug/mergeDebugResources
+eu.simonbinder.sqlite3_flutter_libs-debug-7 /Users/silmac-021/FlutterApplication/FuturemugInterviewer/build/sqlite3_flutter_libs/intermediates/packaged_res/debug/packageDebugResources
+gradleHome-0 /Users/silmac-021/.gradle
