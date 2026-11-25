@@ -1,16 +1,20 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:futuremug_interviewer/core/theme/futuremug_colors.dart';
+import 'package:futuremug_interviewer/core/network/api_exception.dart';
+import 'package:futuremug_interviewer/core/router/app_routes.dart';
+import 'package:futuremug_interviewer/features/authentication/application/sign_up_flow_controller.dart';
+import 'package:futuremug_interviewer/features/authentication/domain/country_code.dart';
+import 'package:futuremug_interviewer/shared/widgets/app_snackbar.dart';
+import 'package:futuremug_interviewer/shared/widgets/brand_app_bar.dart';
+import 'package:futuremug_interviewer/shared/widgets/primary_button.dart';
+import 'package:futuremug_interviewer/shared/widgets/section_card.dart';
+import 'package:futuremug_interviewer/shared/widgets/step_progress_header.dart';
 
-class CountryCode {
-  final String name;
-  final String code;
-  final String flag;
-
-  const CountryCode({required this.name, required this.code, required this.flag});
-}
-
+/// Sign-up step 1 of 3: mobile number with country code → OTP is sent.
 class PhoneAuthScreen extends ConsumerStatefulWidget {
   const PhoneAuthScreen({super.key});
 
@@ -19,20 +23,10 @@ class PhoneAuthScreen extends ConsumerStatefulWidget {
 }
 
 class _PhoneAuthScreenState extends ConsumerState<PhoneAuthScreen> {
-  final _phoneController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-
-  static const List<CountryCode> _countryCodes = [
-    CountryCode(name: 'India', code: '+91', flag: '🇮🇳'),
-    CountryCode(name: 'United States', code: '+1', flag: '🇺🇸'),
-    CountryCode(name: 'United Kingdom', code: '+44', flag: '🇬🇧'),
-    CountryCode(name: 'United Arab Emirates', code: '+971', flag: '🇦🇪'),
-    CountryCode(name: 'Singapore', code: '+65', flag: '🇸🇬'),
-    CountryCode(name: 'Australia', code: '+61', flag: '🇦🇺'),
-    CountryCode(name: 'Germany', code: '+49', flag: '🇩🇪'),
-  ];
-
-  CountryCode _selectedCountry = _countryCodes[0];
+  final _phoneController = TextEditingController();
+  CountryCode _country = CountryCode.all.first;
+  bool _isSubmitting = false;
 
   @override
   void dispose() {
@@ -40,140 +34,131 @@ class _PhoneAuthScreenState extends ConsumerState<PhoneAuthScreen> {
     super.dispose();
   }
 
-  void _onSendOtp() {
-    if (_formKey.currentState?.validate() ?? false) {
-      final fullPhoneNumber = '${_selectedCountry.code}${_phoneController.text.trim()}';
-      context.push('/otp-verification', extra: fullPhoneNumber);
+  Future<void> _onSendOtp() async {
+    if (!(_formKey.currentState?.validate() ?? false)) return;
+    FocusScope.of(context).unfocus();
+    setState(() => _isSubmitting = true);
+    try {
+      await ref.read(signUpFlowProvider.notifier).sendOtp(
+            countryCode: _country.dialCode,
+            phoneNumber: _phoneController.text,
+          );
+      if (mounted) unawaited(context.push(AppRoutes.signUpOtp));
+    } on ApiException catch (e) {
+      if (mounted) AppSnackbar.showError(context, e.message);
+    } finally {
+      if (mounted) setState(() => _isSubmitting = false);
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: FuturemugColors.surfacePureWhite,
-      appBar: AppBar(
-        title: const Text('Phone Verification'),
+      appBar: BrandAppBar(
         actions: [
           TextButton(
-            onPressed: () => context.go('/sign-in'),
-            child: const Text('Sign In', style: TextStyle(fontWeight: FontWeight.w700)),
+            onPressed: () => context.go(AppRoutes.login),
+            child: const Text('Sign in'),
           ),
+          const SizedBox(width: 8),
         ],
       ),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 12),
-                Center(
-                  child: Container(
-                    width: 64,
-                    height: 64,
-                    decoration: BoxDecoration(
-                      color: FuturemugColors.navySubtle,
-                      shape: BoxShape.circle,
-                    ),
-                    child: const Icon(
-                      Icons.phone_android_rounded,
-                      color: FuturemugColors.navyPrimary,
-                      size: 32,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 24),
-                const Text(
-                  'Step 1: Enter Phone Number',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w800,
-                    color: FuturemugColors.textPrimary,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Select your country code and enter a mobile number to receive a 6-digit OTP.',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: FuturemugColors.textSecondary,
-                  ),
-                ),
-                const SizedBox(height: 32),
-                const Text(
-                  'Country Code & Phone Number',
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
-                    color: FuturemugColors.textPrimary,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                      decoration: BoxDecoration(
-                        color: FuturemugColors.surfacePureWhite,
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: FuturemugColors.borderSubtle),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const StepProgressHeader(currentStep: 1, totalSteps: 3),
+              const SizedBox(height: 20),
+              SectionCard(
+                icon: Icons.verified_user_outlined,
+                eyebrow: 'Create your account',
+                title: 'Verify your mobile number',
+                child: Form(
+                  key: _formKey,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text(
+                        "We'll send a 6-digit code by SMS to confirm it's you.",
+                        style: theme.textTheme.bodyMedium?.copyWith(
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
                       ),
-                      child: DropdownButtonHideUnderline(
-                        child: DropdownButton<CountryCode>(
-                          value: _selectedCountry,
-                          items: _countryCodes.map((country) {
-                            return DropdownMenuItem<CountryCode>(
-                              value: country,
-                              child: Row(
-                                children: [
-                                  Text(country.flag, style: const TextStyle(fontSize: 18)),
-                                  const SizedBox(width: 6),
-                                  Text(country.code, style: const TextStyle(fontWeight: FontWeight.w600)),
-                                ],
+                      const SizedBox(height: 20),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: 116,
+                            child: DropdownButtonFormField<CountryCode>(
+                              initialValue: _country,
+                              isExpanded: true,
+                              decoration: const InputDecoration(
+                                labelText: 'Code',
                               ),
-                            );
-                          }).toList(),
-                          onChanged: (val) {
-                            if (val != null) {
-                              setState(() {
-                                _selectedCountry = val;
-                              });
-                            }
-                          },
-                        ),
+                              items: [
+                                for (final c in CountryCode.all)
+                                  DropdownMenuItem(
+                                    value: c,
+                                    child: Text(
+                                      '${c.flag} ${c.dialCode}',
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                              ],
+                              onChanged: _isSubmitting
+                                  ? null
+                                  : (value) {
+                                      if (value == null) return;
+                                      setState(() => _country = value);
+                                      // Re-check the number against the new rules.
+                                      if (_phoneController.text.isNotEmpty) {
+                                        _formKey.currentState?.validate();
+                                      }
+                                    },
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: TextFormField(
+                              controller: _phoneController,
+                              enabled: !_isSubmitting,
+                              keyboardType: TextInputType.phone,
+                              textInputAction: TextInputAction.done,
+                              autofillHints: const [
+                                AutofillHints.telephoneNumberNational,
+                              ],
+                              inputFormatters: [
+                                FilteringTextInputFormatter.digitsOnly,
+                                LengthLimitingTextInputFormatter(
+                                  _country.maxLength,
+                                ),
+                              ],
+                              onFieldSubmitted: (_) => _onSendOtp(),
+                              decoration: InputDecoration(
+                                labelText: 'Mobile number',
+                                hintText: _country.example,
+                              ),
+                              validator: (value) =>
+                                  _country.validate(value ?? ''),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: TextFormField(
-                        controller: _phoneController,
-                        keyboardType: TextInputType.phone,
-                        decoration: const InputDecoration(
-                          hintText: '98765 43210',
-                        ),
-                        validator: (value) {
-                          if (value == null || value.trim().isEmpty) {
-                            return 'Please enter phone number';
-                          }
-                          if (value.trim().length < 7) {
-                            return 'Enter valid phone number';
-                          }
-                          return null;
-                        },
+                      const SizedBox(height: 28),
+                      PrimaryButton(
+                        label: 'Send code',
+                        isLoading: _isSubmitting,
+                        onPressed: _onSendOtp,
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-                const Spacer(),
-                ElevatedButton(
-                  onPressed: _onSendOtp,
-                  child: const Text('Receive OTP'),
-                ),
-                const SizedBox(height: 16),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

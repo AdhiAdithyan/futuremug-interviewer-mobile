@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:futuremug_interviewer/core/theme/futuremug_colors.dart';
+import 'package:futuremug_interviewer/core/network/api_exception.dart';
+import 'package:futuremug_interviewer/core/router/app_routes.dart';
+import 'package:futuremug_interviewer/features/authentication/application/auth_controller.dart';
+import 'package:futuremug_interviewer/features/authentication/domain/auth_state.dart';
+import 'package:futuremug_interviewer/shared/widgets/app_snackbar.dart';
+import 'package:futuremug_interviewer/shared/widgets/brand_app_bar.dart';
+import 'package:futuremug_interviewer/shared/widgets/primary_button.dart';
+import 'package:futuremug_interviewer/shared/widgets/section_card.dart';
 
 class SignInScreen extends ConsumerStatefulWidget {
-  final String? prefilledUsername;
+  const SignInScreen({super.key, this.prefilledUsername});
 
-  const SignInScreen({
-    super.key,
-    this.prefilledUsername,
-  });
+  final String? prefilledUsername;
 
   @override
   ConsumerState<SignInScreen> createState() => _SignInScreenState();
@@ -20,11 +24,20 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
   late final TextEditingController _usernameController;
   final _passwordController = TextEditingController();
   bool _obscurePassword = true;
+  bool _isSubmitting = false;
 
   @override
   void initState() {
     super.initState();
-    _usernameController = TextEditingController(text: widget.prefilledUsername ?? '');
+    _usernameController = TextEditingController(text: widget.prefilledUsername);
+
+    // Show why the user was signed out (e.g. expired session), once.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final auth = ref.read(authControllerProvider);
+      if (mounted && auth is Unauthenticated && auth.reason != null) {
+        AppSnackbar.showInfo(context, auth.reason!);
+      }
+    });
   }
 
   @override
@@ -34,118 +47,123 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
     super.dispose();
   }
 
-  void _onLogin() {
-    if (_formKey.currentState?.validate() ?? false) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Welcome back, ${_usernameController.text.trim()}!')),
-      );
-      // Navigate to Dashboard
-      context.go('/dashboard');
+  Future<void> _onSignIn() async {
+    if (!(_formKey.currentState?.validate() ?? false)) return;
+    FocusScope.of(context).unfocus();
+    setState(() => _isSubmitting = true);
+    try {
+      await ref.read(authControllerProvider.notifier).signIn(
+            username: _usernameController.text,
+            password: _passwordController.text,
+          );
+      // The router redirects to the dashboard or profile setup.
+    } on ApiException catch (e) {
+      if (mounted) AppSnackbar.showError(context, e.message);
+    } finally {
+      if (mounted) setState(() => _isSubmitting = false);
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: FuturemugColors.surfacePureWhite,
-      appBar: AppBar(
-        title: const Text('Sign In'),
-        actions: [
-          TextButton(
-            onPressed: () => context.go('/phone-auth'),
-            child: const Text('Register', style: TextStyle(fontWeight: FontWeight.w700)),
-          ),
-        ],
-      ),
+      appBar: const BrandAppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 12),
-                Center(
-                  child: Container(
-                    width: 64,
-                    height: 64,
-                    decoration: BoxDecoration(
-                      color: FuturemugColors.navySubtle,
-                      shape: BoxShape.circle,
+          padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
+          child: AutofillGroup(
+            child: Form(
+              key: _formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  SectionCard(
+                    icon: Icons.login_rounded,
+                    eyebrow: 'Welcome back',
+                    title: 'Sign in',
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        TextFormField(
+                          controller: _usernameController,
+                          textInputAction: TextInputAction.next,
+                          autofillHints: const [AutofillHints.username],
+                          decoration: const InputDecoration(
+                            labelText: 'Username or email',
+                            prefixIcon: Icon(Icons.person_outline),
+                          ),
+                          validator: (value) =>
+                              (value == null || value.trim().isEmpty)
+                                  ? 'Enter your username or email'
+                                  : null,
+                        ),
+                        const SizedBox(height: 16),
+                        TextFormField(
+                          controller: _passwordController,
+                          obscureText: _obscurePassword,
+                          textInputAction: TextInputAction.done,
+                          autofillHints: const [AutofillHints.password],
+                          onFieldSubmitted: (_) => _onSignIn(),
+                          decoration: InputDecoration(
+                            labelText: 'Password',
+                            prefixIcon: const Icon(Icons.lock_outline),
+                            suffixIcon: IconButton(
+                              tooltip: _obscurePassword
+                                  ? 'Show password'
+                                  : 'Hide password',
+                              icon: Icon(
+                                _obscurePassword
+                                    ? Icons.visibility_off
+                                    : Icons.visibility,
+                              ),
+                              onPressed: () => setState(
+                                () => _obscurePassword = !_obscurePassword,
+                              ),
+                            ),
+                          ),
+                          validator: (value) => (value == null || value.isEmpty)
+                              ? 'Enter your password'
+                              : null,
+                        ),
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: TextButton(
+                            onPressed: _isSubmitting
+                                ? null
+                                : () => context.push(AppRoutes.forgotPassword),
+                            child: const Text('Forgot password?'),
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        PrimaryButton(
+                          label: 'Sign in',
+                          isLoading: _isSubmitting,
+                          onPressed: _onSignIn,
+                        ),
+                      ],
                     ),
-                    child: const Icon(
-                      Icons.login_rounded,
-                      color: FuturemugColors.navyPrimary,
-                      size: 32,
-                    ),
                   ),
-                ),
-                const SizedBox(height: 24),
-                const Text(
-                  'Step 4: Login to Portal',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w800,
-                    color: FuturemugColors.textPrimary,
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'New to Futuremug?',
+                        style: theme.textTheme.bodyMedium?.copyWith(
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: _isSubmitting
+                            ? null
+                            : () => context.push(AppRoutes.signUpPhone),
+                        child: const Text('Create an account'),
+                      ),
+                    ],
                   ),
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Sign in using your created username/email and password.',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: FuturemugColors.textSecondary,
-                  ),
-                ),
-                const SizedBox(height: 32),
-                TextFormField(
-                  controller: _usernameController,
-                  decoration: const InputDecoration(
-                    labelText: 'Username or Email',
-                    hintText: 'johndoe_evaluator',
-                    prefixIcon: Icon(Icons.person_outline),
-                  ),
-                  validator: (val) {
-                    if (val == null || val.trim().isEmpty) return 'Enter username or email';
-                    return null;
-                  },
-                ),
-                const SizedBox(height: 16),
-                TextFormField(
-                  controller: _passwordController,
-                  obscureText: _obscurePassword,
-                  decoration: InputDecoration(
-                    labelText: 'Password',
-                    hintText: '••••••••••••',
-                    prefixIcon: const Icon(Icons.lock_outline),
-                    suffixIcon: IconButton(
-                      icon: Icon(_obscurePassword ? Icons.visibility_off : Icons.visibility),
-                      onPressed: () {
-                        setState(() {
-                          _obscurePassword = !_obscurePassword;
-                        });
-                      },
-                    ),
-                  ),
-                  validator: (val) {
-                    if (val == null || val.isEmpty) return 'Enter password';
-                    return null;
-                  },
-                ),
-                const SizedBox(height: 28),
-                ElevatedButton(
-                  onPressed: _onLogin,
-                  child: const Text('Sign In & Go to Dashboard'),
-                ),
-                const SizedBox(height: 20),
-                Center(
-                  child: TextButton(
-                    onPressed: () => context.go('/phone-auth'),
-                    child: const Text('New Evaluator? Register with Phone Number'),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

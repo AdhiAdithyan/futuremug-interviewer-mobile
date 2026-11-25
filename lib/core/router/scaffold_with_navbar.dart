@@ -1,68 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../features/dashboard/presentation/screens/dashboard_home_screen.dart';
-import '../../features/interviews/presentation/screens/interview_schedules_screen.dart';
-import '../../features/calendar/presentation/screens/availability_calendar_screen.dart';
-import '../../features/skills/presentation/screens/skill_management_screen.dart';
-import '../../features/profile/presentation/screens/profile_overview_screen.dart';
-import '../theme/futuremug_colors.dart';
+/// Bottom navigation for the five main tabs. Each tab keeps its own
+/// navigation stack (StatefulShellRoute), and each tab has its own URL.
+class ScaffoldWithNavBar extends StatelessWidget {
+  const ScaffoldWithNavBar({super.key, required this.navigationShell});
 
-class MainTabScaffold extends StatefulWidget {
-  const MainTabScaffold({super.key});
-
-  @override
-  State<MainTabScaffold> createState() => _MainTabScaffoldState();
-}
-
-class _MainTabScaffoldState extends State<MainTabScaffold> {
-  int _currentIndex = 0;
-
-  final List<Widget> _screens = const [
-    DashboardHomeScreen(),
-    InterviewSchedulesScreen(),
-    AvailabilityCalendarScreen(),
-    SkillManagementScreen(),
-    ProfileOverviewScreen(),
-  ];
+  final StatefulNavigationShell navigationShell;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _screens,
-      ),
+      body: navigationShell,
       bottomNavigationBar: NavigationBar(
-        selectedIndex: _currentIndex,
-        onDestinationSelected: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
+        selectedIndex: navigationShell.currentIndex,
+        onDestinationSelected: (index) => navigationShell.goBranch(
+          index,
+          // Tapping the current tab again returns to its first screen.
+          initialLocation: index == navigationShell.currentIndex,
+        ),
         destinations: const [
           NavigationDestination(
             icon: Icon(Icons.dashboard_outlined),
-            selectedIcon: Icon(Icons.dashboard, color: FuturemugColors.navyPrimary),
+            selectedIcon: Icon(Icons.dashboard),
             label: 'Dashboard',
           ),
           NavigationDestination(
             icon: Icon(Icons.event_note_outlined),
-            selectedIcon: Icon(Icons.event_note, color: FuturemugColors.navyPrimary),
-            label: 'Schedules',
+            selectedIcon: Icon(Icons.event_note),
+            label: 'Interviews',
           ),
           NavigationDestination(
             icon: Icon(Icons.calendar_month_outlined),
-            selectedIcon: Icon(Icons.calendar_month, color: FuturemugColors.navyPrimary),
-            label: 'Calendar',
+            selectedIcon: Icon(Icons.calendar_month),
+            label: 'Availability',
           ),
           NavigationDestination(
-            icon: Icon(Icons.psychology_outlined),
-            selectedIcon: Icon(Icons.psychology, color: FuturemugColors.navyPrimary),
-            label: 'Skills',
+            icon: Icon(Icons.account_balance_wallet_outlined),
+            selectedIcon: Icon(Icons.account_balance_wallet),
+            label: 'Earnings',
           ),
           NavigationDestination(
             icon: Icon(Icons.person_outline),
-            selectedIcon: Icon(Icons.person, color: FuturemugColors.navyPrimary),
+            selectedIcon: Icon(Icons.person),
             label: 'Profile',
           ),
         ],

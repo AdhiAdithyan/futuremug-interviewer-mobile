@@ -26,6 +26,10 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Futuremug uses the camera so you can photograph your ID or certificates for your interviewer profile.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Futuremug opens your photo library so you can upload a photo of your documents or a profile picture.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

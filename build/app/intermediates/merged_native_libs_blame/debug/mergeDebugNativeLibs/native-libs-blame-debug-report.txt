@@ -2,10 +2,6 @@ lib/arm64-v8a/libdartjni.so->project :jni
 lib/armeabi-v7a/libdartjni.so->project :jni
 lib/x86/libdartjni.so->project :jni
 lib/x86_64/libdartjni.so->project :jni
-lib/arm64-v8a/libdatastore_shared_counter.so->androidx.datastore:datastore-core-android:1.2.1
-lib/armeabi-v7a/libdatastore_shared_counter.so->androidx.datastore:datastore-core-android:1.2.1
-lib/x86/libdatastore_shared_counter.so->androidx.datastore:datastore-core-android:1.2.1
-lib/x86_64/libdatastore_shared_counter.so->androidx.datastore:datastore-core-android:1.2.1
 lib/armeabi-v7a/libflutter.so->io.flutter:armeabi_v7a_debug:1.0.0-371f77202a73e8dff57a8b3bff75bca55c090aee
 lib/arm64-v8a/libsqlite3.so->eu.simonbinder:sqlite3-native-library:3.52.0
 lib/armeabi-v7a/libsqlite3.so->eu.simonbinder:sqlite3-native-library:3.52.0

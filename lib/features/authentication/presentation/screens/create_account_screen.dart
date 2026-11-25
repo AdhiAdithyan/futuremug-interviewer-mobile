@@ -1,161 +1,179 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
-import 'package:futuremug_interviewer/core/theme/futuremug_colors.dart';
+import 'package:futuremug_interviewer/core/network/api_exception.dart';
+import 'package:futuremug_interviewer/features/authentication/application/auth_controller.dart';
+import 'package:futuremug_interviewer/features/authentication/application/sign_up_flow_controller.dart';
+import 'package:futuremug_interviewer/features/authentication/domain/credential_rules.dart';
+import 'package:futuremug_interviewer/features/authentication/presentation/widgets/password_strength_meter.dart';
+import 'package:futuremug_interviewer/shared/widgets/app_snackbar.dart';
+import 'package:futuremug_interviewer/shared/widgets/primary_button.dart';
+import 'package:futuremug_interviewer/shared/widgets/section_card.dart';
+import 'package:futuremug_interviewer/shared/widgets/step_progress_header.dart';
 
+/// Sign-up step 3 of 3: choose a username and password. On success the user
+/// is signed in and the router opens the profile setup.
 class CreateAccountScreen extends ConsumerStatefulWidget {
   const CreateAccountScreen({super.key});
 
   @override
-  ConsumerState<CreateAccountScreen> createState() => _CreateAccountScreenState();
+  ConsumerState<CreateAccountScreen> createState() =>
+      _CreateAccountScreenState();
 }
 
 class _CreateAccountScreenState extends ConsumerState<CreateAccountScreen> {
   final _formKey = GlobalKey<FormState>();
-  final _fullNameController = TextEditingController();
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
-  final _confirmPasswordController = TextEditingController();
+  final _confirmController = TextEditingController();
   bool _obscurePassword = true;
+  bool _isSubmitting = false;
+  String? _usernameServerError;
 
   @override
   void dispose() {
-    _fullNameController.dispose();
     _usernameController.dispose();
     _passwordController.dispose();
-    _confirmPasswordController.dispose();
+    _confirmController.dispose();
     super.dispose();
   }
 
-  void _onCreateAccount() {
-    if (_formKey.currentState?.validate() ?? false) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Account created successfully! Please sign in.')),
-      );
-      // Navigate to Login screen with created credentials
-      context.go('/sign-in', extra: _usernameController.text.trim());
+  Future<void> _onCreate() async {
+    setState(() => _usernameServerError = null);
+    if (!(_formKey.currentState?.validate() ?? false)) return;
+    final token = ref.read(signUpFlowProvider).verificationToken;
+    if (token == null) return; // The router sends the user back to step 1.
+
+    FocusScope.of(context).unfocus();
+    setState(() => _isSubmitting = true);
+    try {
+      await ref.read(authControllerProvider.notifier).register(
+            verificationToken: token,
+            username: _usernameController.text,
+            password: _passwordController.text,
+          );
+      // The router redirects to profile setup. The sign-up state is kept so
+      // the profile form can prefill the verified phone number; it is reset
+      // on sign-out.
+    } on ConflictException catch (e) {
+      if (!mounted) return;
+      setState(() => _usernameServerError = e.message);
+      _formKey.currentState?.validate();
+    } on ApiException catch (e) {
+      if (mounted) AppSnackbar.showError(context, e.message);
+    } finally {
+      if (mounted) setState(() => _isSubmitting = false);
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Scaffold(
-      backgroundColor: FuturemugColors.surfacePureWhite,
-      appBar: AppBar(
-        title: const Text('Create Account'),
-      ),
+      appBar: AppBar(title: const Text('Create your account')),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 12),
-                Center(
-                  child: Container(
-                    width: 64,
-                    height: 64,
-                    decoration: BoxDecoration(
-                      color: FuturemugColors.navySubtle,
-                      shape: BoxShape.circle,
+          padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const StepProgressHeader(currentStep: 3, totalSteps: 3),
+              const SizedBox(height: 20),
+              SectionCard(
+                icon: Icons.person_add_alt_1_rounded,
+                eyebrow: 'Sign-in details',
+                title: 'Choose a username and password',
+                child: AutofillGroup(
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        TextFormField(
+                          controller: _usernameController,
+                          enabled: !_isSubmitting,
+                          textInputAction: TextInputAction.next,
+                          autofillHints: const [AutofillHints.newUsername],
+                          decoration: const InputDecoration(
+                            labelText: 'Username',
+                            prefixIcon: Icon(Icons.alternate_email_rounded),
+                          ),
+                          onChanged: (_) {
+                            if (_usernameServerError != null) {
+                              setState(() => _usernameServerError = null);
+                            }
+                          },
+                          validator: (value) =>
+                              _usernameServerError ??
+                              CredentialRules.username(value),
+                        ),
+                        const SizedBox(height: 16),
+                        TextFormField(
+                          controller: _passwordController,
+                          enabled: !_isSubmitting,
+                          obscureText: _obscurePassword,
+                          textInputAction: TextInputAction.next,
+                          autofillHints: const [AutofillHints.newPassword],
+                          onChanged: (_) => setState(() {}),
+                          decoration: InputDecoration(
+                            labelText: 'Password',
+                            helperText:
+                                'At least 8 characters, with a letter and a number',
+                            prefixIcon: const Icon(Icons.lock_outline),
+                            suffixIcon: IconButton(
+                              tooltip: _obscurePassword
+                                  ? 'Show password'
+                                  : 'Hide password',
+                              icon: Icon(
+                                _obscurePassword
+                                    ? Icons.visibility_off
+                                    : Icons.visibility,
+                              ),
+                              onPressed: () => setState(
+                                () => _obscurePassword = !_obscurePassword,
+                              ),
+                            ),
+                          ),
+                          validator: CredentialRules.password,
+                        ),
+                        PasswordStrengthMeter(
+                          password: _passwordController.text,
+                        ),
+                        const SizedBox(height: 16),
+                        TextFormField(
+                          controller: _confirmController,
+                          enabled: !_isSubmitting,
+                          obscureText: _obscurePassword,
+                          textInputAction: TextInputAction.done,
+                          onFieldSubmitted: (_) => _onCreate(),
+                          decoration: const InputDecoration(
+                            labelText: 'Confirm password',
+                            prefixIcon: Icon(Icons.lock_reset_outlined),
+                          ),
+                          validator: (value) => CredentialRules.confirmPassword(
+                            value,
+                            _passwordController.text,
+                          ),
+                        ),
+                        const SizedBox(height: 28),
+                        PrimaryButton(
+                          label: 'Create account',
+                          isLoading: _isSubmitting,
+                          onPressed: _onCreate,
+                        ),
+                        const SizedBox(height: 12),
+                        Text(
+                          'Next, you will set up your interviewer profile.',
+                          textAlign: TextAlign.center,
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: theme.colorScheme.onSurfaceVariant,
+                          ),
+                        ),
+                      ],
                     ),
-                    child: const Icon(
-                      Icons.person_add_alt_1_rounded,
-                      color: FuturemugColors.navyPrimary,
-                      size: 32,
-                    ),
                   ),
                 ),
-                const SizedBox(height: 24),
-                const Text(
-                  'Step 3: Create Username & Password',
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w800,
-                    color: FuturemugColors.textPrimary,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Set up your evaluator profile credentials for future secure logins.',
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: FuturemugColors.textSecondary,
-                  ),
-                ),
-                const SizedBox(height: 28),
-                TextFormField(
-                  controller: _fullNameController,
-                  decoration: const InputDecoration(
-                    labelText: 'Full Name',
-                    hintText: 'John Doe',
-                    prefixIcon: Icon(Icons.badge_outlined),
-                  ),
-                  validator: (val) {
-                    if (val == null || val.trim().isEmpty) return 'Enter full name';
-                    return null;
-                  },
-                ),
-                const SizedBox(height: 16),
-                TextFormField(
-                  controller: _usernameController,
-                  decoration: const InputDecoration(
-                    labelText: 'Username',
-                    hintText: 'johndoe_evaluator',
-                    prefixIcon: Icon(Icons.alternate_email_rounded),
-                  ),
-                  validator: (val) {
-                    if (val == null || val.trim().isEmpty) return 'Enter username';
-                    if (val.trim().length < 4) return 'Username must be at least 4 characters';
-                    return null;
-                  },
-                ),
-                const SizedBox(height: 16),
-                TextFormField(
-                  controller: _passwordController,
-                  obscureText: _obscurePassword,
-                  decoration: InputDecoration(
-                    labelText: 'Password',
-                    hintText: '••••••••••••',
-                    prefixIcon: const Icon(Icons.lock_outline),
-                    suffixIcon: IconButton(
-                      icon: Icon(_obscurePassword ? Icons.visibility_off : Icons.visibility),
-                      onPressed: () {
-                        setState(() {
-                          _obscurePassword = !_obscurePassword;
-                        });
-                      },
-                    ),
-                  ),
-                  validator: (val) {
-                    if (val == null || val.isEmpty) return 'Enter password';
-                    if (val.length < 6) return 'Password must be at least 6 characters';
-                    return null;
-                  },
-                ),
-                const SizedBox(height: 16),
-                TextFormField(
-                  controller: _confirmPasswordController,
-                  obscureText: _obscurePassword,
-                  decoration: const InputDecoration(
-                    labelText: 'Confirm Password',
-                    hintText: '••••••••••••',
-                    prefixIcon: Icon(Icons.lock_clock_outlined),
-                  ),
-                  validator: (val) {
-                    if (val != _passwordController.text) return 'Passwords do not match';
-                    return null;
-                  },
-                ),
-                const SizedBox(height: 32),
-                ElevatedButton(
-                  onPressed: _onCreateAccount,
-                  child: const Text('Create Account & Proceed'),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

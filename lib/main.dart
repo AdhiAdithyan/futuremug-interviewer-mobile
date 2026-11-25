@@ -1,27 +1,48 @@
-import 'dart:async';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:futuremug_interviewer/app.dart';
+import 'package:futuremug_interviewer/core/database/app_database.dart';
+import 'package:futuremug_interviewer/core/logging/app_logger.dart';
 
-import 'core/database/app_database.dart';
-import 'core/router/app_router.dart';
-import 'core/theme/futuremug_app_theme.dart';
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-class FuturemugStateObserver extends ProviderObserver {
-  const FuturemugStateObserver();
+  // Framework errors (build/layout/paint).
+  FlutterError.onError = (details) {
+    FlutterError.presentError(details);
+    AppLogger.error(
+      'Flutter error',
+      details.exception,
+      details.stack,
+    );
+  };
 
-  @override
-  void didUpdateProvider(
-    ProviderBase<Object?> provider,
-    Object? previousValue,
-    Object? newValue,
-    ProviderContainer container,
-  ) {
-    if (kDebugMode) {
-      debugPrint('[Riverpod State Shift] Provider: ${provider.name ?? provider.runtimeType}');
-    }
-  }
+  // Errors outside the framework (async gaps, platform channels).
+  WidgetsBinding.instance.platformDispatcher.onError = (error, stackTrace) {
+    AppLogger.error('Uncaught error', error, stackTrace);
+    return true;
+  };
+
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+
+  final database = AppDatabase.open();
+
+  runApp(
+    ProviderScope(
+      overrides: appRootOverrides(database: database),
+      observers: const [_ProviderErrorLogger()],
+      child: const FuturemugInterviewerApp(),
+    ),
+  );
+}
+
+/// Logs providers that fail; successful updates are not logged (too noisy).
+class _ProviderErrorLogger extends ProviderObserver {
+  const _ProviderErrorLogger();
 
   @override
   void providerDidFail(
@@ -30,78 +51,10 @@ class FuturemugStateObserver extends ProviderObserver {
     StackTrace stackTrace,
     ProviderContainer container,
   ) {
-    debugPrint('🚨 [Riverpod Provider Error] ${provider.name ?? provider.runtimeType}: $error');
-  }
-}
-
-Future<void> main() async {
-  runZonedGuarded<Future<void>>(() async {
-    WidgetsFlutterBinding.ensureInitialized();
-
-    await _initializeSystemChrome();
-
-    final appDatabase = AppDatabase();
-
-    final container = ProviderContainer(
-      overrides: [
-        appDatabaseProvider.overrideWithValue(appDatabase),
-      ],
-      observers: const [FuturemugStateObserver()],
-    );
-
-    runApp(
-      UncontrolledProviderScope(
-        container: container,
-        child: const FuturemugInterviewerApp(),
-      ),
-    );
-  }, (error, stackTrace) {
-    debugPrint('🔥 [Uncaught Application Exception] $error\n$stackTrace');
-  });
-}
-
-Future<void> _initializeSystemChrome() async {
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
-
-  SystemChrome.setSystemUIOverlayStyle(
-    const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.dark,
-      statusBarBrightness: Brightness.light,
-      systemNavigationBarColor: Colors.white,
-      systemNavigationBarIconBrightness: Brightness.dark,
-    ),
-  );
-}
-
-class FuturemugInterviewerApp extends ConsumerWidget {
-  const FuturemugInterviewerApp({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final router = ref.watch(onboardingRouterProvider);
-
-    return MaterialApp.router(
-      title: 'Futuremug Interviewer',
-      debugShowCheckedModeBanner: false,
-      routerConfig: router,
-      theme: FuturemugAppTheme.whiteTheme,
-      themeMode: ThemeMode.light,
-      builder: (context, child) {
-        final mediaQueryData = MediaQuery.of(context);
-        final constrainedScale = mediaQueryData.textScaler.clamp(
-          minScaleFactor: 0.85,
-          maxScaleFactor: 1.25,
-        );
-
-        return MediaQuery(
-          data: mediaQueryData.copyWith(textScaler: constrainedScale),
-          child: child ?? const SizedBox.shrink(),
-        );
-      },
+    AppLogger.error(
+      'Provider ${provider.name ?? provider.runtimeType} failed',
+      error,
+      stackTrace,
     );
   }
 }

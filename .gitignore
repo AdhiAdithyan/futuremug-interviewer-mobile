@@ -1,30 +1,58 @@
-### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-.kotlin
-
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
 .DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code (keep shared launch configs if you add them)
+.vscode/*
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Flutter / Dart / Pub
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# FVM (keep .fvmrc, ignore the local SDK link)
+.fvm/flutter_sdk
+.fvm/versions
+
+# Symbolication / obfuscation
+app.*.symbols
+app.*.map.json
+
+# Android Studio release output
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Files the Claude desktop app drops into the project
+Claude outputs/
+
+# Secrets (never commit)
+android/key.properties
+**/*.jks
+**/*.keystore
+.env
+.env.*
